@@ -1,4 +1,4 @@
-import { Spieler } from './../../model/spieler.interface';
+import { Spieler } from '../../model/spieler.class';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 

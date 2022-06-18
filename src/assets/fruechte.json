@@ -1,50 +1,50 @@
 [
   {
-    "title": "Test",
+    "titel": "Test1",
     "score": 100
   },
   {
-    "title": "Test2",
+    "titel": "Test2",
     "score": -100
   },
   {
-    "title": "Test3",
+    "titel": "Test3",
     "score": 300
   },
   {
-    "title": "Test",
+    "titel": "Test4",
     "score": 100
   },
   {
-    "title": "Test2",
+    "titel": "Test5",
     "score": -100
   },
   {
-    "title": "Test3",
+    "titel": "Test6",
     "score": 300
   },
   {
-    "title": "Test",
+    "titel": "Test7",
     "score": 100
   },
   {
-    "title": "Test2",
+    "titel": "Test8",
     "score": -100
   },
   {
-    "title": "Test3",
+    "titel": "Test8",
     "score": 300
   },
   {
-    "title": "Test",
+    "titel": "Test10",
     "score": 100
   },
   {
-    "title": "Test2",
+    "titel": "Test11",
     "score": -100
   },
   {
-    "title": "Test3",
+    "titel": "Test12",
     "score": 300
   }
 ]

@@ -1,6 +1,6 @@
 import { SpielfeldComponent } from './../../components/spielfeld/spielfeld.component';
 import { CountdownComponent } from './../../components/countdown/countdown.component';
-import { Spieler } from './../../model/spieler.interface';
+import { Spieler } from '../../model/spieler.class';
 import { Spielfrage } from '../../model/spielfrage.interface';
 import { FragenEinleseService } from './../../services/fragen-generator/fragen-generator.service';
 import {

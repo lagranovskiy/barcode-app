@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { GameSelectorComponent } from './views/game-selector/game-selector.component';
@@ -49,7 +50,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
-    QRCodeModule
+    QRCodeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

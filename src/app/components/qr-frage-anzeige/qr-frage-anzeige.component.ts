@@ -1,3 +1,4 @@
+import { Spieltreffer } from './../../model/spieltreffer.class';
 import { timer, Subject, takeUntil } from 'rxjs';
 import { Spielfrage } from './../../model/spielfrage.interface';
 import {
@@ -19,9 +20,9 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   spielfragen: Spielfrage[] = [];
 
   @Output()
-  readonly qrcodeGetroffen: EventEmitter<Spielfrage> = new EventEmitter<Spielfrage>();
+  readonly qrcodeGetroffen: EventEmitter<Spieltreffer> = new EventEmitter<Spieltreffer>();
 
-  aktuelleCode!: string ;
+  aktuelleCode!: string;
   aktuelleFrage: Spielfrage | undefined;
   aktuelleCountdown: number = 5;
 
@@ -60,7 +61,8 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
     if (this.aktuelleCode === shootCode) {
       console.log('Treffer!!' + shootCode);
       this.codeSichtbar = false;
-      this.qrcodeGetroffen.emit(this.aktuelleFrage);
+      var treffer : Spieltreffer = {frage: this.aktuelleFrage, tatsaechlicheScore: this.aktuelleFrage?.score, verwendeteCode: shootCode}
+      this.qrcodeGetroffen.emit(treffer);
     }
   }
 
@@ -84,12 +86,12 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   }
 
   private getNeueZufallsfrage() {
-    var zufallsorder = this.getZufallszahl(0, this.spielfragen.length);
+    var zufallsorder = this.getZufallszahl(0, this.spielfragen.length - 1);
     this.aktuelleFrage = this.spielfragen[zufallsorder];
-    this.aktuelleCode = 'QR' + this.getZufallszahl(1000000, 9999999);
+    this.aktuelleCode = 'q' + this.getZufallszahl(1000000, 9999999);
   }
 
-  private  getZufallszahl(min: number, max: number) {
+  private getZufallszahl(min: number, max: number) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + 1) + min;
