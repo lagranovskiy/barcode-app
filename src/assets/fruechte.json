@@ -73,13 +73,13 @@
   },
   {
     "titel": "Дополнительное время",
-    "score": 20,
+    "score": 5,
     "korrekt": true,
     "typ": "ZUSATZZEIT"
   },
   {
     "titel": "Пункты * 2",
-    "score": 20,
+    "score": 5,
     "korrekt": true,
     "typ": "DOPPELTE_SCORE"
   }

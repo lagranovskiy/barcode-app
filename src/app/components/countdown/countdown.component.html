@@ -1,16 +1,12 @@
-
 <div class="row justify-content-md-center" *ngIf="isShown">
   <div class="col">
-    <div class="d-flex justify-content-center">
-
-      <div class="spinner-grow"  style="width: 5rem; height: 5rem;" role="status">
-        <span class="visually-hidden">Начало через...</span>
-      </div>
-
+    <div class="d-flex justify-content-center mt-3">
+      <mat-progress-spinner
+        class="example-margin"
+        [mode]="'determinate'"
+        [value]="countdownPercent"
+      >
+      </mat-progress-spinner>
     </div>
   </div>
-  <div class="col">
-    <h1 class="display-1">{{countdownTime}}</h1>
-  </div>
 </div>
-

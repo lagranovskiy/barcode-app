@@ -19,6 +19,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   readonly countdownAbgelaufen: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   countdownTime: number = 0;
+  countdownPercent: number = 100;
   isShown: boolean = false;
 
   constructor(private timerService: TimerService) {}
@@ -32,7 +33,10 @@ export class CountdownComponent implements OnInit, OnDestroy {
     this.timerService
       .erstelleCountdown(seconds, 1000)
       .subscribe({
-        next: (countdown) => (this.countdownTime = countdown),
+        next: (countdown) => {
+          this.countdownTime = countdown;
+          this.countdownPercent = this.countdownTime / seconds * 100;
+        },
         error: (err) => console.error(err),
         complete: () => {
           this.countdownAbgelaufen.emit(true);

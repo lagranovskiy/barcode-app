@@ -57,7 +57,7 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
     this.spieler = spieler;
     this.spielerRegistriert = true;
     this.spielLauft = true;
-    this.countdownComponent?.startCountdown(5);
+    this.countdownComponent?.startCountdown(3);
   }
 
   spielStarten() {

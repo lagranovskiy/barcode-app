@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { QrFrageAnzeigeComponent } from './components/qr-frage-anzeige/qr-frage-anzeige.component';
 import { QRCodeModule } from 'angularx-qrcode';
@@ -58,7 +59,8 @@ import { FalscheAntwortenPipe } from './pipes/falsche-antworten/falsche-antworte
     MatInputModule,
     QRCodeModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
