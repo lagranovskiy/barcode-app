@@ -1,0 +1,12 @@
+<div >
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <div *ngFor="let item of [0, 1, 2, 3, 4, 5]; let i = index">
+      <mat-grid-tile>
+        <app-qr-frage-anzeige
+          [spielfragen]="spielfragen"
+          (qrcodeGetroffen)="getroffen($event)"
+        ></app-qr-frage-anzeige>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+</div>

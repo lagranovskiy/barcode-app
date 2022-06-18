@@ -1,0 +1,23 @@
+<h2>Кто будет играть?</h2>
+<form class="example-form" [formGroup]="spielerForm">
+  <mat-form-field class="example-full-width form-control-lg" appearance="fill">
+    <mat-label>Твое имя</mat-label>
+    <input type="text" matInput formControlName="spielername" placeholder="Твое имя">
+    <mat-error *ngIf="spielerForm.controls['spielername'].hasError('required')">
+      Имя вводить нужно <strong>обязательно</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width form-control-lg" appearance="fill">
+    <mat-label>Твой возвраст</mat-label>
+    <input type="number" matInput formControlName="alter" placeholder="Твой Возвраст">
+    <mat-error *ngIf="spielerForm.controls['alter'].hasError('required')">
+      Возвраст вводить нужно <strong>обязательно</strong>
+    </mat-error>
+  </mat-form-field>
+
+
+  <button type="button" class="btn btn-primary btn-lg" (click)="start()" [disabled]="spielerForm.invalid">
+    Я готов
+  </button>
+</form>

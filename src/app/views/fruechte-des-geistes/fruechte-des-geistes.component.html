@@ -1,0 +1,11 @@
+<div class="container">
+  <app-spielerdaten
+    *ngIf="!spielstart"
+    (spielerBereit)="spielerBereit($event)"
+  ></app-spielerdaten>
+
+  <app-countdown (countdownAbgelaufen)="spielStarten()"></app-countdown>
+
+  <app-spielfeld [spielfragen]="spielfragen"></app-spielfeld>
+
+</div>

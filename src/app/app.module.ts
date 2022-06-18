@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,14 @@ import { GameStatisticsComponent } from './components/game-statistics/game-stati
 import { FruechteDesGeistesComponent } from './views/fruechte-des-geistes/fruechte-des-geistes.component';
 import { SauberUnsauberComponent } from './views/sauber-unsauber/sauber-unsauber.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SpielfeldComponent } from './components/spielfeld/spielfeld.component';
+import { SpielerdatenComponent } from './components/spielerdaten/spielerdaten.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import { CountdownComponent } from './components/countdown/countdown.component';
+import { QrFrageAnzeigeComponent } from './components/qr-frage-anzeige/qr-frage-anzeige.component';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +31,10 @@ import { HttpClientModule } from '@angular/common/http';
     GameStatisticsComponent,
     FruechteDesGeistesComponent,
     SauberUnsauberComponent,
+    SpielfeldComponent,
+    SpielerdatenComponent,
+    CountdownComponent,
+    QrFrageAnzeigeComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,7 +44,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatButtonModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
