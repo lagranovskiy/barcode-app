@@ -5,13 +5,7 @@ import { CountdownComponent } from './../../components/countdown/countdown.compo
 import { Spieler } from '../../model/spieler.class';
 import { Spielfrage } from '../../model/spielfrage.interface';
 import { FragenEinleseService } from './../../services/fragen-generator/fragen-generator.service';
-import {
-  Component,
-  OnInit,
-  OnDestroy,
-  ViewChild,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { Spieltyp } from 'src/app/model/spieltyp.enum';
 import { Subject, Subscription, takeUntil } from 'rxjs';
 import { Treffertyp } from 'src/app/model/treffertyp.enum';
@@ -37,7 +31,6 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
 
   doppelscoreMode: boolean = false;
 
-  // Subject zum einschalten von Countdown
   @ViewChild(CountdownComponent) countdownComponent!: CountdownComponent;
   @ViewChild(SpielfeldComponent) spielfeldComponent!: SpielfeldComponent;
 
@@ -96,7 +89,7 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
   }
 
   private spielzeitEinstellen() {
-    if(this.spielzeitSubscribtion){
+    if (this.spielzeitSubscribtion) {
       this.spielzeitSubscribtion?.unsubscribe();
     }
 
