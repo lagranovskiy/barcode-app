@@ -40,6 +40,8 @@ export class SpielfeldComponent implements OnInit {
   getroffen(frage: Spieltreffer) {
     this.snackBar.open(frage.tatsaechlicheScore + ' очков', undefined, {
       duration: 1000,
+      verticalPosition: 'top',
+      horizontalPosition: 'center'
     });
     this.qrcodeGetroffen.emit(frage);
   }

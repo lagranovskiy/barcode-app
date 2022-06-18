@@ -1,11 +1,19 @@
 <div class="container">
   <app-spielerdaten
-    *ngIf="!spielstart"
+    *ngIf="!spielerRegistriert"
     (spielerBereit)="spielerBereit($event)"
   ></app-spielerdaten>
 
   <app-countdown (countdownAbgelaufen)="spielStarten()"></app-countdown>
 
-  <app-spielfeld [spielfragen]="spielfragen"></app-spielfeld>
+  <app-spielfeld *ngIf="spielLauft"
+    [spielfragen]="spielfragen"
+    (qrcodeGetroffen)="neueTreffer($event)"
+  ></app-spielfeld>
 
+  <app-game-statistics
+    [spieltreffer]="spieltreffer"
+    [spielzeit]="spielzeit"
+    [detailsAnzeigen]="spielerRegistriert && !spielLauft"
+  ></app-game-statistics>
 </div>

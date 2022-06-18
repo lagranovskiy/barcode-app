@@ -1,3 +1,4 @@
+import { TimerService } from './../../services/timer/timer.service';
 import { BehaviorSubject, Subject, take, takeUntil, timer } from 'rxjs';
 import {
   Component,
@@ -20,34 +21,27 @@ export class CountdownComponent implements OnInit, OnDestroy {
   countdownTime: number = 0;
   isShown: boolean = false;
 
-  private timer = timer(0, 1000);
+  constructor(private timerService: TimerService) {}
 
-  private readonly ngUnsubscribe = new Subject();
-
-  constructor() {}
-
-  ngOnInit(): void {
-    this.timer
-      .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(() => {
-        if (this.countdownTime > 0) {
-          this.countdownTime--;
-
-          if (this.countdownTime === 0) {
-            this.countdownAbgelaufen.emit(true);
-            this.isShown = false;
-          }
-        }
-      });
-  }
+  ngOnInit(): void {}
 
   startCountdown(seconds: number) {
     this.countdownTime = seconds;
     this.isShown = true;
+
+    this.timerService
+      .erstelleCountdown(seconds, 1000)
+      .subscribe({
+        next: (countdown) => (this.countdownTime = countdown),
+        error: (err) => console.error(err),
+        complete: () => {
+          this.countdownAbgelaufen.emit(true);
+          this.isShown = false;
+        },
+      });
   }
 
   ngOnDestroy(): void {
-    this.ngUnsubscribe.next(true);
-    this.ngUnsubscribe.complete();
+
   }
 }

@@ -19,11 +19,14 @@ import { SpielfeldComponent } from './components/spielfeld/spielfeld.component';
 import { SpielerdatenComponent } from './components/spielerdaten/spielerdaten.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { QrFrageAnzeigeComponent } from './components/qr-frage-anzeige/qr-frage-anzeige.component';
 import { QRCodeModule } from 'angularx-qrcode';
-
+import { ZwischensummePipe } from './pipes/zwischensumme/zwischensumme.pipe';
+import { KorrekteAntwortenPipe } from './pipes/korrekte-antworten/korrekte-antworten.pipe';
+import { FalscheAntwortenPipe } from './pipes/falsche-antworten/falsche-antworten.pipe';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { QRCodeModule } from 'angularx-qrcode';
     SpielerdatenComponent,
     CountdownComponent,
     QrFrageAnzeigeComponent,
+    ZwischensummePipe,
+    KorrekteAntwortenPipe,
+    FalscheAntwortenPipe,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +57,8 @@ import { QRCodeModule } from 'angularx-qrcode';
     ReactiveFormsModule,
     MatInputModule,
     QRCodeModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

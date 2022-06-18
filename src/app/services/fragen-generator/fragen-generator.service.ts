@@ -1,7 +1,7 @@
 import { Spielfrage } from '../../model/spielfrage.interface';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { SpielType } from 'src/app/model/spiel-type.enum';
+import { Spieltyp } from 'src/app/model/spieltyp.enum';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -16,7 +16,7 @@ export class FragenEinleseService {
    *
    * @param spielType typ des Spiels zum laden
    */
-  leseFragebogen(spielType: SpielType):Observable<Spielfrage[]>{
+  leseFragebogen(spielType: Spieltyp):Observable<Spielfrage[]>{
     return this.httpClient.get<Spielfrage[]>(spielType);
   }
 }

@@ -1,50 +1,86 @@
 [
   {
     "titel": "Test1",
-    "score": 100
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test2",
-    "score": -100
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test3",
-    "score": 300
+    "score": 300,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test4",
-    "score": 100
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test5",
-    "score": -100
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test6",
-    "score": 300
+    "score": 300,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test7",
-    "score": 100
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test8",
-    "score": -100
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test8",
-    "score": 300
+    "score": 300,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test10",
-    "score": 100
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test11",
-    "score": -100
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Test12",
-    "score": 300
+    "score": 300,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Дополнительное время",
+    "score": 20,
+    "korrekt": true,
+    "typ": "ZUSATZZEIT"
+  },
+  {
+    "titel": "Пункты * 2",
+    "score": 20,
+    "korrekt": true,
+    "typ": "DOPPELTE_SCORE"
   }
 ]

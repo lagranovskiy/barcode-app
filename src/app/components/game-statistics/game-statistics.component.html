@@ -1,1 +1,59 @@
-<p>game-statistics-component works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table" *ngIf="detailsAnzeigen">
+        <thead>
+          <tr>
+            <th scope="col">Попадание</th>
+            <th scope="col">Очки</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let treffer of spieltreffer">
+            <td
+              [ngClass]="
+                treffer.antwortKorrekt ? 'table-success' : 'table-danger'
+              "
+            >
+              {{ treffer.titel }}
+            </td>
+            <td
+              [ngClass]="
+                treffer.antwortKorrekt ? 'table-success' : 'table-danger'
+              "
+            >
+              {{ treffer.tatsaechlicheScore }}
+              <strong *ngIf="treffer.istDupliziert">(*2)</strong>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+
+<div class="fixed-bottom">
+  <div class="row shadow-lg p-3 mb-5 bg-body rounded">
+    <div class="col text-center fs-2">
+      Твой результат <strong>{{ spieltreffer | zwischensumme }}</strong> очков
+    </div>
+    <div class="col text-center fs-2">
+      <strong class="text-success">{{
+        spieltreffer | korrekteAntworten
+      }}</strong>
+      верно |
+      <strong class="text-danger">{{ spieltreffer | falscheAntworten }}</strong>
+      ошибки
+    </div>
+    <div class="col text-center fs-2">
+      Осталось
+      <strong [ngClass]="spielzeit < 10 ? 'text-danger' : 'text-success'">
+        {{ spielzeit }}
+      </strong>
+      секунд
+    </div>
+  </div>
+</div>
