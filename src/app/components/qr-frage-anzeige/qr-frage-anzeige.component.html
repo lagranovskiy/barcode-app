@@ -1,2 +1,9 @@
-<p>{{aktuelleFrage?.titel}}</p>
-<p>{{aktuelleCode}}</p>
+<div>
+  <p>{{ aktuelleFrage?.titel }}</p>
+  <qrcode
+    [qrdata]="aktuelleCode"
+    [allowEmptyString]="true"
+    [width]="200"
+    [errorCorrectionLevel]="'H'"
+  ></qrcode>
+</div>

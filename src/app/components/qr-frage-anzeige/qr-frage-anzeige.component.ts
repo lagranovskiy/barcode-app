@@ -21,7 +21,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   @Output()
   readonly qrcodeGetroffen: EventEmitter<Spielfrage> = new EventEmitter<Spielfrage>();
 
-  aktuelleCode: string | undefined;
+  aktuelleCode!: string ;
   aktuelleFrage: Spielfrage | undefined;
   aktuelleCountdown: number = 5;
 
@@ -71,7 +71,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
 
   stop() {
     this.aktuelleFrage = undefined;
-    this.aktuelleCode = undefined;
+    this.aktuelleCode = '';
     this.aktivesWarten = false;
     this.spielLauft = false;
     this.codeSichtbar = false;

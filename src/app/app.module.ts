@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { CountdownComponent } from './components/countdown/countdown.component';
 import { QrFrageAnzeigeComponent } from './components/qr-frage-anzeige/qr-frage-anzeige.component';
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { QrFrageAnzeigeComponent } from './components/qr-frage-anzeige/qr-frage-
     HttpClientModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
