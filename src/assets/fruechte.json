@@ -1,85 +1,163 @@
 [
   {
-    "titel": "Test1",
-    "score": 100,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test2",
+    "titel": "Прелюбодеяение",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
   {
-    "titel": "Test3",
-    "score": 300,
-    "korrekt": false,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test4",
-    "score": 100,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test5",
-    "score": 100,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test6",
-    "score": 300,
-    "korrekt": false,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test7",
-    "score": 100,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test8",
-    "score": 100,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test8",
-    "score": 300,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test10",
-    "score": 100,
-    "korrekt": true,
-    "typ": "EIGENSCHAFT"
-  },
-  {
-    "titel": "Test11",
+    "titel": "Гнев",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
   {
-    "titel": "Test12",
-    "score": 300,
+    "titel": "Распри",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Нечистота",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Разногласия",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Непотребство",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Соблазны",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Идолослужение",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Ереси",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Волшебство",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Ненависть",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Вражда",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Убийства",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Ссоры",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Пьянство",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Зависть",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Бесчинство",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Любовь",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Милосердие",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Радость",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Вера",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Мир",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Кротость",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Долготерпение",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Воздержание",
+    "score": 100,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Дополнительное время",
-    "score": 5,
+    "score": 10,
     "korrekt": true,
     "typ": "ZUSATZZEIT"
   },
   {
     "titel": "Пункты * 2",
-    "score": 5,
+    "score": 10,
     "korrekt": true,
     "typ": "DOPPELTE_SCORE"
   }

@@ -24,7 +24,7 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
   spieltreffer: Spieltreffer[] = [];
 
   spieler: Spieler | undefined;
-  spielzeit: number = 10;
+  spielzeit: number = 30;
 
   spielerRegistriert = false;
   spielLauft = false;
