@@ -18,7 +18,7 @@ import { Treffertyp } from 'src/app/model/treffertyp.enum';
   styleUrls: ['./fruechte-des-geistes.component.scss'],
 })
 export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
-  private readonly SPIELZEIT = 10;
+  private readonly SPIELZEIT = 30;
   private readonly ngUnsubscribe = new Subject();
   private readonly spielzeitUnsubscribe = new Subject();
   private spielzeitSubscribtion: Subscription | undefined;

@@ -18,7 +18,7 @@ import { Treffertyp } from 'src/app/model/treffertyp.enum';
 })
 export class SauberUnsauberComponent implements OnInit {
 
-  private readonly SPIELZEIT = 10;
+  private readonly SPIELZEIT = 30;
   private readonly ngUnsubscribe = new Subject();
   private readonly spielzeitUnsubscribe = new Subject();
   private spielzeitSubscribtion: Subscription | undefined;
