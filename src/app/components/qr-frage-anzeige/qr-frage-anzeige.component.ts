@@ -99,9 +99,9 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
           }
           if (this.aktuelleFrage.typ === Treffertyp.EIGENSCHAFT) {
             /**
-             * Bei jedem call wollen wir die tatsächliche Punkte reduzieren jedoch nicht um mehr als 10%
+             * Bei jedem call wollen wir die tatsächliche Punkte reduzieren jedoch nicht um mehr als 5%
              */
-            var maxPunktabzug = this.aktuelleFrage?.score / 10;
+            var maxPunktabzug = this.aktuelleFrage?.score / 20;
             var punktabzug = this.getZufallszahl(1, maxPunktabzug);
             if (this.aktuelleScore - punktabzug <= 0) {
               this.aktuelleScore = 0;
