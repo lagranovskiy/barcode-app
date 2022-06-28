@@ -87,7 +87,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
    * Rekursive Method der verwendet wird um die Qr Codes nacheinander anzuzeigen.
    */
   private startQrAnzeige() {
-    var qrCodeAnzeigenZeit = this.getZufallszahl(5, 15);
+    var qrCodeAnzeigenZeit = this.getZufallszahl(7, 12);
     this.getNeueZufallsfrage();
 
     this.aktuelleCountdownSubscription = this.timerService
