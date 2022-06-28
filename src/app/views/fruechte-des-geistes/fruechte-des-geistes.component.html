@@ -6,7 +6,8 @@
 
   <app-countdown (countdownAbgelaufen)="spielStarten()"></app-countdown>
 
-  <app-spielfeld *ngIf="spielLauft"
+  <app-spielfeld
+    *ngIf="spielLauft"
     [spielfragen]="spielfragen"
     (qrcodeGetroffen)="neueTreffer($event)"
   ></app-spielfeld>
@@ -16,4 +17,6 @@
     [spielzeit]="spielzeit"
     [detailsAnzeigen]="spielerRegistriert && !spielLauft"
   ></app-game-statistics>
+
+  <button type="button" *ngIf="spielerRegistriert && !spielLauft" class="btn btn-primary btn-lg" (click)="spielErneutStarten()">Старт</button>
 </div>

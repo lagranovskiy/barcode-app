@@ -150,14 +150,74 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Любовь",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Милосердие",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Радость",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Вера",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Мир",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Кротость",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Долготерпение",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Воздержание",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Дополнительное время",
     "score": 10,
     "korrekt": true,
     "typ": "ZUSATZZEIT"
   },
   {
+    "titel": "Дополнительное время",
+    "score": 5,
+    "korrekt": true,
+    "typ": "ZUSATZZEIT"
+  },
+  {
     "titel": "Пункты * 2",
     "score": 10,
+    "korrekt": true,
+    "typ": "DOPPELTE_SCORE"
+  },
+  {
+    "titel": "Пункты * 2",
+    "score": 5,
     "korrekt": true,
     "typ": "DOPPELTE_SCORE"
   }

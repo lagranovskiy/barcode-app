@@ -57,7 +57,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   }
 
   start() {
-    var wartezeit = this.getZufallszahl(0, 6);
+    var wartezeit = this.getZufallszahl(0, 3);
 
     // Aktiv random warten und erst danach starten
     this.timerService.erstelleCountdown(wartezeit, 1000).subscribe({
@@ -83,7 +83,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
    * Rekursive Method der verwendet wird um die Qr Codes nacheinander anzuzeigen.
    */
   private startQrAnzeige() {
-    var qrCodeAnzeigenZeit = this.getZufallszahl(3, 10);
+    var qrCodeAnzeigenZeit = this.getZufallszahl(3, 7);
     this.getNeueZufallsfrage();
 
     this.timerService.erstelleCountdown(qrCodeAnzeigenZeit, 1000).subscribe({
@@ -113,7 +113,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   }
 
   private getNeueZufallsfrage() {
-    var zufallsorder = this.getZufallszahl(0, this.spielfragen.length - 1);
+    var zufallsorder = this.getZufallszahl(0, 1000) % (this.spielfragen.length - 1);
     this.aktuelleFrage = this.spielfragen[zufallsorder];
     this.aktuelleCode = 'q' + this.getZufallszahl(1000000, 9999999);
     this.aktuelleScore = this.aktuelleFrage.score;

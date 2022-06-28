@@ -1,3 +1,5 @@
+import { Record } from './../../model/record.class';
+import { RecordStorageService } from './../../services/record-storage/record-storage.service';
 import { TimerService } from './../../services/timer/timer.service';
 import { Spieltreffer } from './../../model/spieltreffer.class';
 import { SpielfeldComponent } from './../../components/spielfeld/spielfeld.component';
@@ -16,6 +18,7 @@ import { Treffertyp } from 'src/app/model/treffertyp.enum';
   styleUrls: ['./fruechte-des-geistes.component.scss'],
 })
 export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
+  private readonly SPIELZEIT = 10;
   private readonly ngUnsubscribe = new Subject();
   private readonly spielzeitUnsubscribe = new Subject();
   private spielzeitSubscribtion: Subscription | undefined;
@@ -23,8 +26,8 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
   spielfragen: Spielfrage[] = [];
   spieltreffer: Spieltreffer[] = [];
 
-  spieler: Spieler | undefined;
-  spielzeit: number = 30;
+  spieler: Spieler = { name: 'Unbekannt', alter: 10 };
+  spielzeit: number = this.SPIELZEIT;
 
   spielerRegistriert = false;
   spielLauft = false;
@@ -36,7 +39,8 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
 
   constructor(
     private fragenEinleseService: FragenEinleseService,
-    private timerService: TimerService
+    private timerService: TimerService,
+    private recordStorage: RecordStorageService
   ) {}
 
   ngOnInit(): void {
@@ -46,11 +50,19 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
       .subscribe((fragen) => (this.spielfragen = fragen));
   }
 
+  spielWiederholen() {}
+
   spielerBereit(spieler: Spieler) {
     this.spieler = spieler;
     this.spielerRegistriert = true;
     this.spielLauft = true;
     this.countdownComponent?.startCountdown(3);
+  }
+
+  spielErneutStarten() {
+    this.spieltreffer = [];
+    this.spielerRegistriert = false;
+    this.spielzeit = this.SPIELZEIT;
   }
 
   spielStarten() {
@@ -61,6 +73,21 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
   spielBeenden() {
     this.spielfeldComponent.stop();
     this.spielLauft = false;
+    this.ergebnisSpeichern();
+  }
+
+  ergebnisSpeichern() {
+    var currentScore = this.spieltreffer.reduce((sum, current) => {
+      var score = current.tatsaechlicheScore as number | 0;
+      return sum + score;
+    }, 0);
+
+    var record: Record = {
+      spieler: this.spieler,
+      punktestand: currentScore,
+      datum: new Date(),
+    };
+    this.recordStorage.storeRecord(Spieltyp.FRUECHTE_DES_GEISTES, record);
   }
 
   neueTreffer(treffer: Spieltreffer) {

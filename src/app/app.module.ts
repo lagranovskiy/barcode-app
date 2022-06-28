@@ -28,6 +28,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { ZwischensummePipe } from './pipes/zwischensumme/zwischensumme.pipe';
 import { KorrekteAntwortenPipe } from './pipes/korrekte-antworten/korrekte-antworten.pipe';
 import { FalscheAntwortenPipe } from './pipes/falsche-antworten/falsche-antworten.pipe';
+import { RecordViewComponent } from './views/record-view/record-view.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { FalscheAntwortenPipe } from './pipes/falsche-antworten/falsche-antworte
     ZwischensummePipe,
     KorrekteAntwortenPipe,
     FalscheAntwortenPipe,
+    RecordViewComponent,
   ],
   imports: [
     BrowserModule,

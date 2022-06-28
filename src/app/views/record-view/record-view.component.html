@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Плоды духа</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Место</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Возвраст</th>
+            <th scope="col">Очки</th>
+            <th scope="col">Дата</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let treffer of getRecordList('FRUECHTE_DES_GEISTES'); let indexOfelement = index">
+            <td>{{ indexOfelement + 1 }}</td>
+            <td>
+              {{ treffer.spieler.name }}
+            </td>
+            <td>
+              {{ treffer.spieler.alter }}
+            </td>
+            <td>
+              {{ treffer.punktestand }}
+            </td>
+            <td>
+              {{ treffer.datum | date: 'dd-MM-yyyy' }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button type="button" class="btn btn-secondary btn-lg" (click)="clearStatistics('FRUECHTE_DES_GEISTES')">Очистить статистику</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
