@@ -1,1 +1,22 @@
-<p>sauber-unsauber works!</p>
+<div class="container">
+  <app-spielerdaten
+    *ngIf="!spielerRegistriert"
+    (spielerBereit)="spielerBereit($event)"
+  ></app-spielerdaten>
+
+  <app-countdown (countdownAbgelaufen)="spielStarten()"></app-countdown>
+
+  <app-spielfeld
+    *ngIf="spielLauft"
+    [spielfragen]="spielfragen"
+    (qrcodeGetroffen)="neueTreffer($event)"
+  ></app-spielfeld>
+
+  <app-game-statistics
+    [spieltreffer]="spieltreffer"
+    [spielzeit]="spielzeit"
+    [detailsAnzeigen]="spielerRegistriert && !spielLauft"
+  ></app-game-statistics>
+
+  <button type="button" *ngIf="spielerRegistriert && !spielLauft" class="btn btn-primary btn-lg" (click)="spielErneutStarten()">Старт</button>
+</div>
