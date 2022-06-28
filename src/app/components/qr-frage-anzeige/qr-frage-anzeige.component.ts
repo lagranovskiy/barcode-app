@@ -10,6 +10,7 @@ import {
   Output,
   EventEmitter,
 } from '@angular/core';
+import { Treffertyp } from 'src/app/model/treffertyp.enum';
 
 @Component({
   selector: 'app-qr-frage-anzeige',
@@ -26,6 +27,8 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   aktuelleCode!: string;
   aktuelleFrage: Spielfrage | undefined;
   aktuelleScore: number = 0;
+
+  aktuelleIcon: string = './assets/taget.png';
 
   spielLauft: boolean = false;
   codeSichtbar: boolean = false;
@@ -57,7 +60,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   }
 
   start() {
-    var wartezeit = this.getZufallszahl(0, 3);
+    var wartezeit = this.getZufallszahl(0, 2);
 
     // Aktiv random warten und erst danach starten
     this.timerService.erstelleCountdown(wartezeit, 1000).subscribe({
@@ -86,7 +89,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
     var qrCodeAnzeigenZeit = this.getZufallszahl(3, 7);
     this.getNeueZufallsfrage();
 
-    this.timerService.erstelleCountdown(qrCodeAnzeigenZeit, 1000).subscribe({
+    this.timerService.erstelleCountdown(qrCodeAnzeigenZeit * 2, 500).subscribe({
       next: () => {
         if (this.aktuelleFrage == undefined) {
           return;
@@ -106,17 +109,44 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
         if (!this.spielLauft) {
           return;
         }
-        this.codeSichtbar = true;
-        this.startQrAnzeige();
+
+        if (this.codeSichtbar == true) {
+          // nicht getroffen, dann kurze Pause und dann wieder anzeigen
+          this.codeSichtbar = false;
+          this.timerService.erstelleCountdown(2, 1000).subscribe({
+            complete: () => {
+              this.codeSichtbar = true;
+              this.startQrAnzeige();
+            },
+          });
+        } else {
+          // Getroffe, dann wieder sichtbar machen
+          this.codeSichtbar = true;
+          this.startQrAnzeige();
+        }
       },
     });
   }
 
   private getNeueZufallsfrage() {
-    var zufallsorder = this.getZufallszahl(0, 1000) % (this.spielfragen.length - 1);
+    var zufallsorder =
+      this.getZufallszahl(0, 1000) % (this.spielfragen.length - 1);
     this.aktuelleFrage = this.spielfragen[zufallsorder];
     this.aktuelleCode = 'q' + this.getZufallszahl(1000000, 9999999);
     this.aktuelleScore = this.aktuelleFrage.score;
+    this.aktuelleIcon = this.updateIcon();
+  }
+
+  private updateIcon(): string {
+    switch (this.aktuelleFrage?.typ) {
+      case Treffertyp.DOPPELTE_SCORE:
+        return './assets/money.png';
+      case Treffertyp.EIGENSCHAFT:
+        return './assets/target.png';
+      case Treffertyp.ZUSATZZEIT:
+        return './assets/time.png';
+    }
+    return './assets/taget.png';
   }
 
   private getZufallszahl(min: number, max: number) {

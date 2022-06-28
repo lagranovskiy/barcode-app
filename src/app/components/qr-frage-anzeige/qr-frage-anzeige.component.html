@@ -1,14 +1,27 @@
 <div *ngIf="codeSichtbar">
-  <div class="row justify-content-md-center">
-    <div class="text-center">
-      <mark><strong>{{ aktuelleFrage?.titel }}</strong></mark>
+  <div class="row">
+    <div class="col text-center">
+      <div class="fs-3 lh-1">
+        <mark
+          ><strong>{{ aktuelleFrage?.titel }}</strong></mark
+        >
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
       <qrcode
         [qrdata]="aktuelleCode"
         [allowEmptyString]="true"
-        [width]="150"
+        [width]="180"
         [errorCorrectionLevel]="'H'"
+        [imageSrc]="aktuelleIcon"
       ></qrcode>
-      {{ aktuelleScore }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <div class="fs-3 font-monospace">{{ aktuelleScore }}</div>
     </div>
   </div>
 </div>

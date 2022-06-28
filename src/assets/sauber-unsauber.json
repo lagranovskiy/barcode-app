@@ -1,0 +1,294 @@
+[
+  {
+    "titel": "Библия",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Богослужение",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Церковь",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Братья и Сестры",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Христианское пение",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Лагерь",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Христианские книги",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Гитара",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Флейта",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Пианино",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Подработка",
+    "score": 50,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Поход",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Помощь по дому",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Учеба",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Целомудрие",
+    "score": 150,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Книга",
+    "score": 60,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Знания",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Скромная одежда",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Спорт",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Поделки",
+    "score": 70,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Благовестие",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },  {
+    "titel": "Спевка",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Воскресная школа",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Косметика",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Обтягивающая одежда",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Роскошь",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Кинотеатр",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Мирские друзья",
+    "score": 50,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Похоть",
+    "score": 150,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Мирская музыка",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Фото футболистов",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Компьютерные игры",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Сигарета",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Наркотики",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Жвачка на собрании",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Сплетни",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Обман",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Хитрость",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "SnapChat",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },  {
+    "titel": "Instagram",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },  {
+    "titel": "Facebook",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },{
+    "titel": "Распущенные волосы",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },{
+    "titel": "Смартфон",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },{
+    "titel": "Короткая юбка",
+    "score": 70,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },{
+    "titel": "Драка",
+    "score": 130,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },{
+    "titel": "Ссора",
+    "score": 130,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Дополнительное время",
+    "score": 10,
+    "korrekt": true,
+    "typ": "ZUSATZZEIT"
+  },
+  {
+    "titel": "Дополнительное время",
+    "score": 5,
+    "korrekt": true,
+    "typ": "ZUSATZZEIT"
+  },
+  {
+    "titel": "Пункты * 2",
+    "score": 10,
+    "korrekt": true,
+    "typ": "DOPPELTE_SCORE"
+  },
+  {
+    "titel": "Пункты * 2",
+    "score": 5,
+    "korrekt": true,
+    "typ": "DOPPELTE_SCORE"
+  }
+]

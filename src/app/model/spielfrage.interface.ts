@@ -4,5 +4,5 @@ export interface Spielfrage {
   titel: string;
   score: number;
   korrekt: true;
-  typ: Treffertyp
+  typ: Treffertyp;
 }
