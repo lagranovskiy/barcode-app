@@ -1,12 +1,7 @@
 import { TimerService } from './../../services/timer/timer.service';
 import { Spieltreffer } from './../../model/spieltreffer.class';
 import {
-  timer,
-  Subject,
-  takeUntil,
-  Observable,
   Subscription,
-  lastValueFrom,
 } from 'rxjs';
 import { Spielfrage } from './../../model/spielfrage.interface';
 import {
@@ -19,7 +14,6 @@ import {
 } from '@angular/core';
 import { Treffertyp } from 'src/app/model/treffertyp.enum';
 import { XORShift } from 'random-seedable';
-import PRNG from 'random-seedable/@types/PRNG';
 
 @Component({
   selector: 'app-qr-frage-anzeige',
@@ -128,7 +122,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
              * Bei jedem call wollen wir die tatsächliche Punkte reduzieren jedoch nicht um mehr als 5%
              */
             var maxPunktabzug = this.aktuelleFrage?.score / 20;
-            var punktabzug = this.random.randRange(1, maxPunktabzug);
+            var punktabzug = ~~this.random.randBelow(maxPunktabzug);
             if (this.aktuelleScore - punktabzug <= 0) {
               this.aktuelleScore = 0;
             } else {
@@ -162,7 +156,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   private getNeueZufallsfrage() {
     var nextNumber = this.getNextFrageIndex();
     this.aktuelleFrage = this.spielfragen[nextNumber];
-    this.aktuelleCode = '' + this.random.randRange(1000000, 9999999);
+    this.aktuelleCode = '' + ~~this.random.randRange(1000000, 9999999);
     this.aktuelleScore = this.aktuelleFrage.score;
     this.aktuelleIcon = this.updateIcon();
   }
@@ -211,6 +205,12 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
     } else if (this.spielerAlter <= 13) {
       this.minShowTime = 4;
       this.maxShowTime = 12;
+    } else if (this.spielerAlter <= 16) {
+      this.minShowTime = 3;
+      this.maxShowTime = 10;
+    } else if (this.spielerAlter > 50) {
+      this.minShowTime = 2;
+      this.maxShowTime = 5;
     } else {
       this.minShowTime = 3;
       this.maxShowTime = 9;

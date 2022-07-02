@@ -32,7 +32,7 @@ export class SpielfeldComponent implements OnInit {
 
   @ViewChildren(QrFrageAnzeigeComponent) qrFelder!: QrFrageAnzeigeComponent[];
 
-  aktuellerQrCode!: string;
+  aktuellerQrCode: string = '';
 
   constructor(private snackBar: MatSnackBar) {}
 
