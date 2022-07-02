@@ -6,8 +6,20 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Блуд",
+    "score": 60,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Гнев",
     "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Злость",
+    "score": 50,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
@@ -18,7 +30,19 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Ссора",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Нечистота",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Грех",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
@@ -42,6 +66,12 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Искушения",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Идолослужение",
     "score": 100,
     "korrekt": false,
@@ -55,6 +85,12 @@
   },
   {
     "titel": "Волшебство",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Магия",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
@@ -114,6 +150,12 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Послушание",
+    "score": 120,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Радость",
     "score": 100,
     "korrekt": true,
@@ -162,9 +204,21 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Доброта",
+    "score": 50,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Радость",
     "score": 100,
     "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Смех",
+    "score": 50,
+    "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
   {
@@ -187,6 +241,12 @@
   },
   {
     "titel": "Долготерпение",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Терпение",
     "score": 100,
     "korrekt": true,
     "typ": "EIGENSCHAFT"

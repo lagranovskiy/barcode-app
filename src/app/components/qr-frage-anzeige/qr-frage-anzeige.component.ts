@@ -1,6 +1,13 @@
 import { TimerService } from './../../services/timer/timer.service';
 import { Spieltreffer } from './../../model/spieltreffer.class';
-import { timer, Subject, takeUntil, Observable, Subscription } from 'rxjs';
+import {
+  timer,
+  Subject,
+  takeUntil,
+  Observable,
+  Subscription,
+  lastValueFrom,
+} from 'rxjs';
 import { Spielfrage } from './../../model/spielfrage.interface';
 import {
   Component,
@@ -11,6 +18,8 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { Treffertyp } from 'src/app/model/treffertyp.enum';
+import { XORShift } from 'random-seedable';
+import PRNG from 'random-seedable/@types/PRNG';
 
 @Component({
   selector: 'app-qr-frage-anzeige',
@@ -21,17 +30,26 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   @Input()
   spielfragen: Spielfrage[] = [];
 
+  @Input()
+  spielerAlter!: number;
+
   @Output()
   readonly qrcodeGetroffen: EventEmitter<Spieltreffer> = new EventEmitter<Spieltreffer>();
 
   aktuelleCode!: string;
   aktuelleFrage: Spielfrage | undefined;
-  aktuelleScore: number = 0;
 
+  aktuelleScore: number = 0;
   aktuelleIcon: string = './assets/taget.png';
+
+  minShowTime: number = 3;
+  maxShowTime: number = 10;
 
   spielLauft: boolean = false;
   codeSichtbar: boolean = false;
+
+  random: XORShift = new XORShift(100000);
+  currentShowPlan: number[] = [];
 
   aktuelleCountdownSubscription: Subscription | undefined;
 
@@ -69,8 +87,13 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   }
 
   start() {
+    this.random.seed = Math.floor(Math.random() * 100000);
+    this.createRandoShowPlan();
+    this.createComplexitySettings();
+
     this.spielLauft = true;
     this.codeSichtbar = true;
+
     this.startQrAnzeige();
   }
 
@@ -87,7 +110,10 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
    * Rekursive Method der verwendet wird um die Qr Codes nacheinander anzuzeigen.
    */
   private startQrAnzeige() {
-    var qrCodeAnzeigenZeit = this.getZufallszahl(7, 12);
+    var qrCodeAnzeigenZeit = this.random.randRange(
+      this.minShowTime,
+      this.maxShowTime
+    );
     this.getNeueZufallsfrage();
 
     this.aktuelleCountdownSubscription = this.timerService
@@ -102,7 +128,7 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
              * Bei jedem call wollen wir die tatsächliche Punkte reduzieren jedoch nicht um mehr als 5%
              */
             var maxPunktabzug = this.aktuelleFrage?.score / 20;
-            var punktabzug = this.getZufallszahl(1, maxPunktabzug);
+            var punktabzug = this.random.randRange(1, maxPunktabzug);
             if (this.aktuelleScore - punktabzug <= 0) {
               this.aktuelleScore = 0;
             } else {
@@ -134,10 +160,9 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
   }
 
   private getNeueZufallsfrage() {
-    var zufallsorder =
-      this.getZufallszahl(0, 1000) % (this.spielfragen.length - 1);
-    this.aktuelleFrage = this.spielfragen[zufallsorder];
-    this.aktuelleCode = 'q' + this.getZufallszahl(1000000, 9999999);
+    var nextNumber = this.getNextFrageIndex();
+    this.aktuelleFrage = this.spielfragen[nextNumber];
+    this.aktuelleCode = '' + this.random.randRange(1000000, 9999999);
     this.aktuelleScore = this.aktuelleFrage.score;
     this.aktuelleIcon = this.updateIcon();
   }
@@ -154,9 +179,41 @@ export class QrFrageAnzeigeComponent implements OnInit, OnDestroy {
     return './assets/taget.png';
   }
 
-  private getZufallszahl(min: number, max: number) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+  private getNextFrageIndex(): number {
+    var lastFromPlan = this.currentShowPlan.pop();
+
+    if (lastFromPlan == undefined) {
+      this.createRandoShowPlan();
+      console.info('All questions already shown');
+      return 0;
+    }
+
+    return lastFromPlan;
+  }
+  private createRandoShowPlan() {
+    this.currentShowPlan = this.random.randRangeArray(
+      this.spielfragen.length,
+      0,
+      this.spielfragen.length - 1
+    );
+  }
+
+  private createComplexitySettings() {
+    if (this.spielerAlter <= 7) {
+      this.minShowTime = 10;
+      this.maxShowTime = 20;
+    } else if (this.spielerAlter <= 9) {
+      this.minShowTime = 8;
+      this.maxShowTime = 18;
+    } else if (this.spielerAlter <= 11) {
+      this.minShowTime = 6;
+      this.maxShowTime = 14;
+    } else if (this.spielerAlter <= 13) {
+      this.minShowTime = 4;
+      this.maxShowTime = 12;
+    } else {
+      this.minShowTime = 3;
+      this.maxShowTime = 9;
+    }
   }
 }

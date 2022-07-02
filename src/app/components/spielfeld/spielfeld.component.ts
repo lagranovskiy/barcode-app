@@ -5,14 +5,10 @@ import {
   Component,
   Input,
   OnInit,
-  ViewChild,
   Output,
   EventEmitter,
   ViewChildren,
-  AfterViewInit,
 } from '@angular/core';
-import { MatGridTileHeaderCssMatStyler } from '@angular/material/grid-list';
-import { MatInput } from '@angular/material/input';
 import { _isNumberValue } from '@angular/cdk/coercion';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -28,6 +24,9 @@ export class SpielfeldComponent implements OnInit {
   @Input()
   spielfragen: Spielfrage[] = [];
 
+  @Input()
+  spielerAlter: number = 10;
+
   @Output()
   readonly qrcodeGetroffen: EventEmitter<Spieltreffer> = new EventEmitter<Spieltreffer>();
 
@@ -41,7 +40,7 @@ export class SpielfeldComponent implements OnInit {
     this.snackBar.open(frage.tatsaechlicheScore + ' очков', undefined, {
       duration: 1000,
       verticalPosition: 'top',
-      horizontalPosition: 'center'
+      horizontalPosition: 'center',
     });
     this.qrcodeGetroffen.emit(frage);
   }
@@ -52,9 +51,7 @@ export class SpielfeldComponent implements OnInit {
 
   handleKeyboardEvent(event: KeyboardEvent) {
     console.log(event);
-    if (event.key === 'q') {
-      this.aktuellerQrCode = event.key;
-    } else if (event.code === 'Enter' && this.aktuellerQrCode?.length === 8) {
+    if (event.code === 'Enter') {
       this.shoot(this.aktuellerQrCode);
       this.aktuellerQrCode = '';
     } else {

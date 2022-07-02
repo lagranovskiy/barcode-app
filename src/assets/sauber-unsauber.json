@@ -1,25 +1,25 @@
 [
   {
     "titel": "Библия",
-    "score": 100,
+    "score": 150,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Богослужение",
-    "score": 100,
+    "score": 150,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Церковь",
-    "score": 100,
+    "score": 150,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
   },
   {
     "titel": "Братья и Сестры",
-    "score": 100,
+    "score": 120,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
   },
@@ -90,8 +90,26 @@
     "typ": "EIGENSCHAFT"
   },
   {
-    "titel": "Книга",
-    "score": 60,
+    "titel": "Хорошая книга",
+    "score": 80,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Пост",
+    "score": 150,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Друзья",
+    "score": 80,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Подарки",
+    "score": 30,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
   },
@@ -99,6 +117,18 @@
     "titel": "Знания",
     "score": 100,
     "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Христианские игры",
+    "score": 70,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Христианские фильмы",
+    "score": 70,
+    "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
   {
@@ -114,6 +144,30 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Хор",
+    "score": 130,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Волейбол",
+    "score": 40,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Теннис",
+    "score": 40,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Бег",
+    "score": 40,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Поделки",
     "score": 70,
     "korrekt": true,
@@ -124,7 +178,8 @@
     "score": 100,
     "korrekt": true,
     "typ": "EIGENSCHAFT"
-  },  {
+  },
+  {
     "titel": "Спевка",
     "score": 100,
     "korrekt": true,
@@ -139,6 +194,18 @@
   {
     "titel": "Косметика",
     "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Украшения",
+    "score": 110,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Социальные сети",
+    "score": 80,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
@@ -162,7 +229,7 @@
   },
   {
     "titel": "Мирские друзья",
-    "score": 50,
+    "score": 120,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
@@ -175,6 +242,24 @@
   {
     "titel": "Мирская музыка",
     "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Зависть",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Месть",
+    "score": 60,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Месть",
+    "score": 60,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
   },
@@ -215,6 +300,12 @@
     "typ": "EIGENSCHAFT"
   },
   {
+    "titel": "Ложь",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
     "titel": "Обман",
     "score": 100,
     "korrekt": false,
@@ -231,37 +322,44 @@
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },  {
+  },
+  {
     "titel": "Instagram",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },  {
+  },
+  {
     "titel": "Facebook",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },{
+  },
+  {
     "titel": "Распущенные волосы",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },{
+  },
+  {
     "titel": "Смартфон",
     "score": 100,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },{
+  },
+  {
     "titel": "Короткая юбка",
     "score": 70,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },{
+  },
+  {
     "titel": "Драка",
     "score": 130,
     "korrekt": false,
     "typ": "EIGENSCHAFT"
-  },{
+  },
+  {
     "titel": "Ссора",
     "score": 130,
     "korrekt": false,
@@ -275,7 +373,7 @@
   },
   {
     "titel": "Дополнительное время",
-    "score": 5,
+    "score": 15,
     "korrekt": true,
     "typ": "ZUSATZZEIT"
   },
@@ -287,7 +385,7 @@
   },
   {
     "titel": "Пункты * 2",
-    "score": 5,
+    "score": 15,
     "korrekt": true,
     "typ": "DOPPELTE_SCORE"
   }

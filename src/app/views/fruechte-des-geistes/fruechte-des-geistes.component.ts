@@ -56,6 +56,19 @@ export class FruechteDesGeistesComponent implements OnInit, OnDestroy {
     this.spieler = spieler;
     this.spielerRegistriert = true;
     this.spielLauft = true;
+
+    if(this.spieler.alter <= 7){
+      this.spielzeit = 90;
+    } else if (this.spieler.alter <= 9){
+      this.spielzeit = 80;
+    } else if (this.spieler.alter <= 11){
+      this.spielzeit = 70;
+    } else if (this.spieler.alter <= 13){
+      this.spielzeit = 60;
+    } else {
+      this.spielzeit = 50;
+    }
+
     this.countdownComponent?.startCountdown(3);
   }
 
