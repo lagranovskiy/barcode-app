@@ -13,6 +13,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { GameSelectorComponent } from './views/game-selector/game-selector.component';
 import { GameStatisticsComponent } from './components/game-statistics/game-statistics.component';
 import { FruechteDesGeistesComponent } from './views/fruechte-des-geistes/fruechte-des-geistes.component';
+import { ApostelnComponent } from './views/aposteln/aposteln.component';
 import { SauberUnsauberComponent } from './views/sauber-unsauber/sauber-unsauber.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpielfeldComponent } from './components/spielfeld/spielfeld.component';
@@ -37,6 +38,7 @@ import { RecordViewComponent } from './views/record-view/record-view.component';
     GameSelectorComponent,
     GameStatisticsComponent,
     FruechteDesGeistesComponent,
+    ApostelnComponent,
     SauberUnsauberComponent,
     SpielfeldComponent,
     SpielerdatenComponent,

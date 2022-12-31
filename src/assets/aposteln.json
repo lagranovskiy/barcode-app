@@ -1,0 +1,194 @@
+[
+  {
+    "titel": "Петр",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Андрей",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Иаков Заведеев",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Иоанн Заведеев",
+    "score": 50,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Иаков Алфеев",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Иуда Фаддей",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Иуда Искариот",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Фома",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Филипп",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Симон Зилот",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Матфей (Левий)",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Ворфоломей",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Нафанаил",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Тимофей",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Варавва",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Лука",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Максим",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Кирилл",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Габриэль",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Павел",
+    "score": 100,
+    "korrekt": true,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Эдуард",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Ирод",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Пилат",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Пилат",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Виталий",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Леонид",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Адам",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Константин",
+    "score": 100,
+    "korrekt": false,
+    "typ": "EIGENSCHAFT"
+  },
+  {
+    "titel": "Дополнительное время",
+    "score": 10,
+    "korrekt": true,
+    "typ": "ZUSATZZEIT"
+  },
+  {
+    "titel": "Дополнительное время",
+    "score": 15,
+    "korrekt": true,
+    "typ": "ZUSATZZEIT"
+  },
+  {
+    "titel": "Пункты * 2",
+    "score": 10,
+    "korrekt": true,
+    "typ": "DOPPELTE_SCORE"
+  },
+  {
+    "titel": "Пункты * 2",
+    "score": 5,
+    "korrekt": true,
+    "typ": "DOPPELTE_SCORE"
+  }
+]

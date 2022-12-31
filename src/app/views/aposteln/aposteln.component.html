@@ -1,0 +1,23 @@
+<div class="container text-center">
+  <app-spielerdaten
+    *ngIf="!spielerRegistriert"
+    (spielerBereit)="spielerBereit($event)"
+  ></app-spielerdaten>
+
+  <app-countdown (countdownAbgelaufen)="spielStarten()"></app-countdown>
+  <button type="button" *ngIf="spielerRegistriert && !spielLauft" class="btn btn-primary btn-lg" (click)="spielErneutStarten()">Старт</button>
+
+  <app-spielfeld
+    *ngIf="spielLauft"
+    [spielfragen]="spielfragen"
+    [spielerAlter]="spieler.alter"
+    (qrcodeGetroffen)="neueTreffer($event)"
+  ></app-spielfeld>
+
+  <app-game-statistics
+    [spieltreffer]="spieltreffer"
+    [spielzeit]="spielzeit"
+    [detailsAnzeigen]="spielerRegistriert && !spielLauft"
+  ></app-game-statistics>
+
+</div>
